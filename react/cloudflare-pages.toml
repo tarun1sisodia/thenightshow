@@ -1,0 +1,10 @@
+# Cloudflare Pages build configuration for the Customer site (react/).
+# See docs/project/ENVIRONMENTS.md for the full variable contract.
+
+[build]
+command = "npm run build"
+output_directory = "dist"
+
+[build.environment]
+# Node 22 is required by the prerender command (--experimental-strip-types).
+NODE_VERSION = "22"

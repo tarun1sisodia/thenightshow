@@ -1,0 +1,16 @@
+{
+  "name": "@skb/customer",
+  "private": true,
+  "version": "0.0.0",
+  "description": "SK Baghel Tour & Travels Customer site — React + Vite + TypeScript, Cloudflare Pages (scaffold; built out in later phases).",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  }
+}
