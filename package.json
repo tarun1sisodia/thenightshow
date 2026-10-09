@@ -1,0 +1,30 @@
+{
+  "name": "thenightshow",
+  "private": true,
+  "description": "SK Baghel Tour & Travels platform — Agra-based transportation and tour-booking (Admin, Backend, Customer, shared contracts).",
+  "workspaces": [
+    "contracts",
+    "backend",
+    "admin",
+    "react"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "contracts:sync": "node scripts/sync-contracts.mjs",
+    "verify": "npm run contracts:sync && npm run customer:typecheck && npm run admin:typecheck && npm run backend:typecheck && npm test",
+    "customer:typecheck": "npm run typecheck --workspace=react",
+    "admin:typecheck": "npm run typecheck --workspace=admin",
+    "backend:typecheck": "npm run typecheck --workspace=backend",
+    "customer:build": "npm run build --workspace=react",
+    "admin:build": "npm run build --workspace=admin",
+    "backend:build": "npm run build --workspace=backend",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@skb/contracts",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Canonical cross-app contracts for SK Baghel Tour & Travels: fleet tiers, API envelope, money units, identifiers, public release model, observability context.",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./enums/vehicle-tiers": "./enums/vehicle-tiers.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  }
+}
